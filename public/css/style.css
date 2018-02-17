@@ -1,0 +1,268 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Sawarabi Gothic"; }
+
+* {
+  -webkit-appearance: none; }
+
+a:link {
+  color: #000; }
+
+a:visited {
+  color: #000; }
+
+a:hover {
+  color: #000; }
+
+a:active {
+  color: #000; }
+
+input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  outline: none; }
+
+*:focus {
+  outline: none; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin: 0; }
+
+#app {
+  width: 100%;
+  height: 100%; }
+
+.screen-iframe {
+  position: relative;
+  width: 100%; }
+
+.screen-iframe:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; }
+
+#content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.app-presentation {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .app-presentation iframe {
+    width: 100%;
+    height: 100%; }
+
+#screen-canvas {
+  width: 100%;
+  height: 100%; }
+
+.presentation-screen {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto; }
+
+.card {
+  width: 100%;
+  display: inline-flex; }
+  .card img {
+    width: 45px;
+    height: 45px;
+    margin: 0 5px 0 5px; }
+  .card .card-contents {
+    width: calc(100% - 60px); }
+    .card .card-contents p {
+      width: 100%;
+      word-wrap: break-word; }
+
+.screen {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .screen iframe {
+    width: 100%;
+    height: 450px; }
+  .screen h2 {
+    margin: 0;
+    padding: 10px 0 0 5px;
+    border-bottom: solid #000 2px; }
+
+.comment {
+  position: static;
+  width: 100%;
+  z-index: 13; }
+  .comment .comment-input {
+    margin: 5px 10px 10px 10px; }
+    .comment .comment-input input {
+      border: solid 1px #000;
+      width: 100%;
+      margin-bottom: 7px; }
+    .comment .comment-input .btn-good {
+      margin-left: 5px;
+      border-radius: 30px; }
+    .comment .comment-input .btn-hee {
+      border-radius: 30px;
+      margin-left: 5px; }
+    .comment .comment-input .arrow-box {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+      width: auto;
+      height: 20px;
+      line-height: 18px;
+      color: #000;
+      text-align: center;
+      background: #F6F6F6;
+      border: 1px solid #000;
+      z-index: 0;
+      margin-left: 18px; }
+    .comment .comment-input .arrow-box:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      margin-top: -4px;
+      display: block;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 8px 15px 0 0;
+      border-color: transparent #000 transparent transparent;
+      z-index: -1; }
+  .comment .comment-list {
+    width: 100%; }
+    .comment .comment-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+    .comment .comment-list li {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+      font-size: 12px;
+      background: #eee;
+      width: calc(100% - 20px);
+      margin: 10px 10px 0 10px;
+      padding: 5px 0 5px 0; }
+
+.app-login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); }
+  .app-login h1 {
+    margin: 30px; }
+  .app-login input {
+    width: 230px;
+    border: solid 1px #000;
+    border-bottom: 0;
+    height: 30px;
+    border-radius: 0;
+    padding-left: 5px; }
+  .app-login .btn-join {
+    width: 230px;
+    height: 30px;
+    border-radius: 0;
+    border: 1px solid #000;
+    color: #fff;
+    letter-spacing: .5em;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%); }
+
+.app-login-presenter {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%); }
+  .app-login-presenter .btn-presenter {
+    cursor: pointer;
+    font-style: italic;
+    border: 0;
+    text-decoration: underline;
+    background: transparent;
+    font-size: 12px; }
+
+.app-login-title {
+  width: 100%;
+  height: 100vh;
+  background: #eee;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .app-login-title h1 {
+    position: absolute;
+    color: #000;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%); }
+
+@media screen and (min-width: 1050px) {
+  .screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%; }
+    .screen iframe {
+      width: 100%;
+      height: 450px; }
+    .screen h2 {
+      padding: 10px 0 0 30px;
+      border-bottom: solid #000 2px; }
+  .comment {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    width: calc(30% - 20px);
+    height: calc(100% - 20px); }
+    .comment .comment-input {
+      width: 100%;
+      height: 55px; }
+      .comment .comment-input input {
+        width: 100%; }
+    .comment .comment-list {
+      position: relative;
+      margin-left: 10px;
+      border: solid #000 1px;
+      width: 100%;
+      height: calc(100% - 75px);
+      overflow-y: scroll; }
+      .comment .comment-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+      .comment .comment-list li {
+        font-size: 12px;
+        background: #eee;
+        width: 96%;
+        margin: 10px 0 0 2%;
+        padding: 5px 0 5px 0; } }
+
+.btn {
+  background: #000;
+  border-radius: 3px;
+  color: #fff;
+  height: 25px;
+  cursor: pointer; }
