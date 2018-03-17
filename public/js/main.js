@@ -2,7 +2,7 @@
 
 var socket = io.connect(location.origin);
 
-var url = "";
+var url = "http://192.168.2.103:8080/#/presentation";
 
 var commentData = [];
 var goodNum = void 0;
@@ -36,7 +36,7 @@ socket.emit("join", {
 // 初回読み込み時にスライド初期化
 socket.emit("getCurrentPage");
 socket.on("initPage", function (d) {
-  PDFJS.getDocument(pdfFile).then(function (pdfDoc_) {
+  pdfjs.getDocument(pdfFile).then(function (pdfDoc_) {
     pdfDoc = pdfDoc_;
     pageNum = d;
     renderPage(d);
@@ -128,7 +128,7 @@ var _main = {
 
   // app-login----------------------------
 };var appLogin = Vue.component("app-login", {
-  template: "\n  <div>\n    <div class=\"app-login-title\">\n      <h1>PresentationApp</h1>\n    </div>\n    <div class=\"app-login\">\n      <input v-model=\"text\" type=\"text\" placeholder=\"Who are you...\" />\n      <br>\n      <button class=\"btn-join\" @click=\"join()\">JOIN</button>\n    </div>\n    <a class=\"app-login-presenter\" href=\"/#/presentation\"><button class=\"btn-presenter\" @click=\"reload()\">Click me, if you are presenter</button></a>\n  </div>\n",
+  template: "\n  <div  class=\"bg\">\n    <div class=\"app-login\">\n      <h1>PresentationApp</h1>\n      <input v-model=\"text\" type=\"text\" placeholder=\"Who are you...\" />\n      <button class=\"btn-join\" @click=\"join()\">JOIN</button>\n      <a class=\"app-login-presenter\" href=\"/#/presentation\"><button class=\"btn-presenter\" @click=\"reload()\">Click me, if you are presenter</button></a>\n    </div>\n  </div>\n",
   data: function data() {
     return {
       text: ""

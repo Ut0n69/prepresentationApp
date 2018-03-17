@@ -1,6 +1,6 @@
 const socket = io.connect(location.origin)
 
-const url = ""
+const url = "http://192.168.2.103:8080/#/presentation"
 
 let commentData = []
 let goodNum
@@ -35,7 +35,7 @@ socket.emit("join", {
 // 初回読み込み時にスライド初期化
 socket.emit("getCurrentPage")
 socket.on("initPage", function (d) {
-  PDFJS.getDocument(pdfFile).then(function (pdfDoc_) {
+  pdfjs.getDocument(pdfFile).then(function (pdfDoc_) {
     pdfDoc = pdfDoc_
     pageNum = d
     renderPage(d)
@@ -165,16 +165,13 @@ const _main = {
 // app-login----------------------------
 const appLogin = Vue.component("app-login", {
   template: `
-  <div>
-    <div class="app-login-title">
-      <h1>PresentationApp</h1>
-    </div>
+  <div  class="bg">
     <div class="app-login">
+      <h1>PresentationApp</h1>
       <input v-model="text" type="text" placeholder="Who are you..." />
-      <br>
       <button class="btn-join" @click="join()">JOIN</button>
+      <a class="app-login-presenter" href="/#/presentation"><button class="btn-presenter" @click="reload()">Click me, if you are presenter</button></a>
     </div>
-    <a class="app-login-presenter" href="/#/presentation"><button class="btn-presenter" @click="reload()">Click me, if you are presenter</button></a>
   </div>
 `,
   data: function () {

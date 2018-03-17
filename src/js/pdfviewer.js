@@ -1,5 +1,7 @@
 var pdfFile = '../sample.pdf';
-PDFJS.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+var pdfjs = window['pdfjs-dist/build/pdf'];
+pdfjs.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 
 var pdfDoc = null,
   pageRendering = true,

@@ -10,7 +10,7 @@
     "sass": "gulp",
     "bs": "browser-sync start --config bs-config.js",
     "server": "nodemon server.js",
-    "start": "npm run sass & npm run babel & npm run bs & npm run server"
+    "start": "npm run sass & npm run babel & npm run server"
   },
   "keywords": [],
   "babel": {
@@ -31,6 +31,7 @@
     "socket.io": "^2.0.4"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
   }
 }

@@ -202,26 +202,44 @@ p {
   }
 }
 
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ccc;
+}
+
 .app-login {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  & h1 {
-    margin: 30px;
-  }
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
   & input {
     width: 230px;
     border: solid 1px #000;
-    border-bottom: 0;
     height: 30px;
     border-radius: 0;
-    padding-left: 5px;
+    top: 111px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
   }
   & .btn-join {
+    left: 50%;
+    top: 200px;
+    position: absolute;
+    transform: translateX(-50%);
     width: 230px;
-    height: 30px;
-    border-radius: 0;
+    height: 40px;
+    border-radius: 30px;
     border: 1px solid #000;
     color: #fff;
     letter-spacing: .5em;
@@ -233,6 +251,7 @@ p {
 }
 
 .app-login-presenter {
+  width: 300px;
   position: fixed;
   bottom: 30px;
   left: 50%;
@@ -244,22 +263,6 @@ p {
     text-decoration: underline;
     background: rgba(0,0,0,0);
     font-size: 12px;
-  }
-}
-
-.app-login-title {
-  width: 100%;
-  height: 100vh;
-  background: #eee;
-  position: fixed;
-  top: 0;
-  left: 0;
-  h1 {
-    position: absolute;
-    color: #000;
-    top: 35px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 
